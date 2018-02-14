@@ -1,0 +1,9 @@
+{\"type\":\"FeatureCollection\",\"features\":[{\"type\":\"Feature\",\"properties\":{},\"geometry\":{\"type\":\"LineString\",\"coordinates\":[[23.57468605041504,46.76461846569092],[23.580951690673825,46.766793791457935],[23.584899902343746,46.76885145119896],[23.585758209228516,46.76708774766197],[23.59090805053711,46.76914539617393],[23.597517013549805,46.77102660602765],[23.603782653808594,46.77231989968773],[23.607301712036133,46.773613162291724],[23.610134124755856,46.77520030576954],[23.608074188232422,46.77690496332891],[23.614425659179688,46.77825689474684]]}}]}-13
+
+
+//  partea "{\"type\":\"FeatureCollection\",\"features\":[{\"type\":\"Feature\",\"properties\":{},\"geometry\":{\"type\":\"LineString\",\"coordinates\":[" e implicita
+//  la coordinates sa fie structurat: [[x1,y1],[x2,y2],[x3,y3],...]
+//  dupa ce inchizi parantezele pui un dash (-) i scrii ora, apoi inca un dash si minutele. Asta e timpul necesar de parcurgere al traseului
+
+//  formatul final e ceva de genul
+//  {\"type\":\"FeatureCollection\",\"features\":[{\"type\":\"Feature\",\"properties\":{},\"geometry\":{\"type\":\"LineString\",\"coordinates\":[[x1,y1],[x2,y2],[x3,y3],...]}}]}-h-m

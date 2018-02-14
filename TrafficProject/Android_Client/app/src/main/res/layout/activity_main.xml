@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.mapbox.mapboxsdk.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        mapbox:mapbox_cameraTargetLat="46.776883"
+        mapbox:mapbox_cameraTargetLng="23.608209"
+        mapbox:mapbox_styleUrl="@string/mapbox_style_mapbox_streets"
+        mapbox:mapbox_cameraZoom="11" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="0dp"
+            android:background="@color/mapboxGrayLight" />
+
+        <TextView
+            android:id="@+id/clockBg"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/startButton"
+            android:layout_marginTop="27dp"
+            android:background="@color/mapboxGrayLight" />
+
+        <Button
+            android:id="@+id/startButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20px"
+            android:enabled="false"
+            android:padding="5px"
+            android:text="@string/start_navigation" />
+
+        <Button
+            android:id="@+id/btnAddStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/btnAddEnd"
+            android:layout_alignBottom="@+id/btnAddEnd"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="14dp"
+            android:layout_marginStart="14dp"
+            android:text="@string/add_start" />
+
+        <Button
+            android:id="@+id/btnAddEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/lblDur"
+            android:layout_alignBottom="@+id/lblDur"
+            android:layout_toEndOf="@+id/btnAddStart"
+            android:layout_toRightOf="@+id/btnAddStart"
+            android:text="@string/add_end" />
+
+        <TextView
+            android:id="@+id/lblDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/lblDur"
+            android:layout_alignBottom="@+id/lblDur"
+            android:layout_toEndOf="@+id/lblDur"
+            android:layout_toRightOf="@+id/lblDur"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/lblDur"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="62dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_toEndOf="@+id/btnAddEnd"
+            android:layout_toRightOf="@+id/btnAddEnd"
+            android:text="@string/duration"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lblDur"
+            android:layout_marginTop="404dp"
+            android:layout_toEndOf="@+id/btnAddStart"
+            android:layout_toRightOf="@+id/btnAddStart"
+            android:text="@string/button" />
+
+        <Button
+            android:id="@+id/btnSel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/btnAddEnd"
+            android:layout_alignLeft="@+id/btnAddStart"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/btnAddEnd"
+            android:layout_alignStart="@+id/btnAddStart"
+            android:text="@string/select_time" />
+
+        <TimePicker
+            android:id="@+id/timePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:headerBackground="@color/colorPrimary"
+            android:numbersBackgroundColor="@android:color/background_light"
+            android:numbersSelectorColor="@color/colorPrimary" />
+
+        <Button
+            android:id="@+id/btnOk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/textView"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:text="@string/done" />
+
+
+        <Button
+            android:id="@+id/btnClear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/startButton"
+            android:layout_alignLeft="@+id/lblDur"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/startButton"
+            android:layout_alignStart="@+id/lblDur"
+            android:text="@string/clear" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
